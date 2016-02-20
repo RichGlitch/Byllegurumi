@@ -1,0 +1,30 @@
+<div class="container wrapper_padding skinny_wrapper" id="post_show_content">
+			<header>
+				<p class="date "><%= @article.created_at.strftime("%A, %b, %d") %></p>
+				<h1><%= @article.titulo %></h1>
+				<hr>
+			</header>
+			<div id="show_article">
+				<p></p><%=   @article.patron %></p>
+				
+			<hr>
+				<div class="article-actions pagination">
+					<%= link_to "Edit this article" , edit_article_path(@article) %>
+					<%= link_to "View all articles" , articles_path %>
+					<%= link_to "Delete this article" , articles_path(@article), method: :delete,
+					data: {confirm: "Are you sure?"}
+					
+					%>
+				</div>
+			</div>
+			<hr>
+			<div id="share_box">
+				<p>Share <%= @article.titulo %></p>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-google-plus"></i></a>
+			</div>
+			<hr>
+	
+			
+</div>	
