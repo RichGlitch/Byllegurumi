@@ -1,1 +1,37 @@
-Home
+<div class="center portada">
+	<div id="foto"></div>
+  <h1>Byllegurumi</h1>
+  <%= link_to "Sign up now", new_article_path, class: "btn btn-primary btn-lg" %>
+</div>
+<div class="containerX wrapper_padding clearfix">
+			<div class="col-md-6 about homepage_content">
+				<h2>About</h2>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas sem eget metus pharetra, nec volutpat justo varius. Vivamus ac leo quam. Etiam sit amet dapibus risus. Sed ornare dui nulla viverra porttitor ac id n.</p><p>Duis lacinia leo mauris, sed pharetra ligula ultrices at. Curabitur lectus ex, laoreet eget molestie et, bibendum volutpat lacus. Praesent et risus quam. Maecenas et odio nec odio efficitur cida ligula, a semper leo nisi vel felis. Nullam pretium tincidunt nulla a luctus.</p>
+
+			</div>
+			<div class="col-md-3 homepage_content articlesList">
+				<h2>Personajes</h2>
+				<hr>
+				<% @articles.each do |article| %>
+					<div class="item_home col-md-12">
+					  <div class="img_item col-md-3"></div>
+					  <div class="desc_item col-md-8 col-md-offset-1">
+					  	<h3><%= link_to article.titulo, article_path(article) %></h3>
+					  	<p class="date"><%= article.created_at.strftime("%A, %b, %d") %></p>
+					  </div>
+					</div>
+				<% end %>
+				
+			</div>
+			<div class="col-md-3 homepage_content projectsList">
+				<h2>Otros</h2>
+				<hr>
+				<h3><a href="#">Unicase</a></h3>
+				<p class="date">Friday April 10th</p>
+					<h3><a href="#">The Rich Community</a></h3>
+				<p class="date">Friday April 10th</p>
+					<h3><a href="#">12 in 12 Challenge</a></h3>
+				<p class="date">Friday April 10th</p>
+			</div>
+		</div>

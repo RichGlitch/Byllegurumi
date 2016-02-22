@@ -1,0 +1,89 @@
+@import "colors";
+
+.col-1, .col-2, .col-3{
+	float: left;
+}
+.col-1{
+	width: 45%;
+	padding: 0 5% 0 2.5%;
+	
+}
+.col-2, .col-3{
+	width: 27%;
+	padding: 0 2.5%;
+}
+
+.homepage_content{
+	h2{
+		font-size: 2.1rem;
+		text-transform: uppercase;
+		color:$color5;
+	}
+	h3{
+		font-size: 1.25em;
+		font-weight: 400;
+		margin-bottom: .5em;
+	}
+	
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: none;
+		color: $color2;
+	}
+}
+	.date{
+		font-size: .8em;
+		margin-bottom: 2em;
+		color: $color2;
+	}
+	p{
+		margin: 0 0 .75em 0;
+	}
+	.item_home{
+		background-color: $color5;
+		padding: 5px;
+		div{
+			margin-top: 0px;
+		}
+		
+		.img_item{
+			background-color: $color2;
+			
+		}
+		.desc_item{
+			background-color: $color3;
+		}
+	}
+}
+
+
+.portada{
+	padding: 30px;
+	background-image: asset-url('unicornios.jpg');
+	background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+	height: 300px;
+	text-align: center;
+}
+
+.portada h1{
+	color: $dark;
+	//background-color: $dark;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: -1px;
+	font-size: 3em;
+	font-weight: bold;
+}
+#foto{
+	background-image: asset-url('puka.jpg');
+	background-size: cover;
+	height: 110px;
+	width: 110px;
+	border-radius: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid $border;
+}

@@ -1,0 +1,154 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "colors";
+@import "pygments";
+
+body{
+  font-family:"Raleway";
+}
+.navbar li a{
+  color:$navbarFG;
+  
+}
+.navbar li a:hover{
+  color:$navbarFG;
+  background-color:$navbarBG;
+}
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: $superlight;
+  //text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover{
+  color: $light;
+  text-decoration: none;
+  background-color:$navbarBG;
+}
+	
+
+h1,h2,h3,h4,h5,h6,p,ul,li{
+	color: $color6;
+}
+h1{
+	font-size: 3.5rem;
+}
+h2{
+	font-size: 3rem;
+}
+h3{
+	font-size: 2.75rem;
+}
+h4{
+	font-size: 2.375rem;
+}
+h5{
+	font-size: 2.25rem;
+}
+h6{
+	font-size: 1.8rem;
+}
+hr{
+	width: 3em;
+	display: block;
+	height: 2px;
+	border: 0;
+	border-top: 2px solid $color5;
+	margin: 2rem 0;
+}
+p, li{
+	font-size: 1.4rem;
+	line-height: 1.75;
+}
+p,ul,ol{
+	margin: 0 0 1.6em 0;
+}
+.wrapper_padding{
+	padding: 4rem 0;
+}
+.skinny_wrapper{
+	margin: 0 auto;
+}
+.clearfix:before, .clearfix:after{
+	content: " ";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+.containerX{
+	margin-bottom: 70px;
+}
+#main_navigation{
+
+	padding: 3em;
+	.name{
+		margin: 0;
+		font-weight: 700;
+		font-size: .85em;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		border: 2px solid $navbarFG;
+		padding: 1rem;
+		text-decoration: none;
+		color: $navbarFG;
+	}
+	.navbar{
+		padding: 0;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		margin-bottom: 1.5rem;
+		background-color: $navbarBG;
+		border-bottom: 1px solid $navbarFG;
+		a{
+			color: $navbarFG;
+			text-decoration: none;
+			margin: 0 0rem;
+			font-size: 1.8rem;
+		}
+		ul{
+			float: right;
+		}
+	}
+	.navbar-toggle{
+	  background-color: $navbarFG;
+	  border-color: $navbarBG;
+	}
+	.icon-bar{
+	  background-color: $navbarBG;
+	}
+}
+#page_title{
+	text-align: center;
+	border-bottom: 1px solid $border;
+	padding: 1.1em 0;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+
+#main_footer{
+	padding: 2.5em;
+	border-top: 1px solid $border;
+	
+	.copyright{
+		float: left;
+		color: $color5;
+		font-size: .9em;
+		margin: 0;
+	}
+	nav{
+		float: right;
+		i{
+			color: $color5;
+			margin-left: 1em;
+			padding-top: .2em;
+			&:hover{
+				color:$color4;
+			}
+		}
+	}
+}
