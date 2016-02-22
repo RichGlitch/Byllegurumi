@@ -5,10 +5,14 @@
 				<hr>
 			</header>
 			<div id="show_article">
-				<p></p><%=   @article.patron %></p>
-				
-			<hr>
-				<div class="article-actions pagination">
+				<div class="article_content">
+					<div class="col-md-3 img_article"></div>
+					<div class="col-md-8 col-md-offset-1 article_patron">
+						<p><%= @article.patron %></p>
+					</div>
+				</div>
+				<hr>
+				<div class="article-actions">
 					<%= link_to "Edit this article" , edit_article_path(@article) %>
 					<%= link_to "View all articles" , articles_path %>
 					<%= link_to "Delete this article" , articles_path(@article), method: :delete,
