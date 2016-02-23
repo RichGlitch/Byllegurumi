@@ -1,20 +1,5 @@
 <h1 id="page_title">Artículos</h1>
-		<div class="skinny_wrapper container" id="posts_wrapper">
-  		<% @articles.each do |article| %>
-    		<div class="post">
-  				<p class="date"><%= article.created_at.strftime("%A, %b, %d") %></p>
-  				<h2><%= link_to article.titulo, article_path(article) %></h2>
-  				<small>Creado por: <%= article.user.username if article.user %> </small>
-  				<div class="article-actions">
-						<%= link_to "Edit this article" , edit_article_path(article) %>
-						<%= link_to "Delete this article" , article_path(article), method: :delete,
-						data: {confirm: "Are you sure?"}
-						%>
-					</div>
-				<hr>
-  			</div>
-      <% end %>
-		</div>
+		<%= render 'article', obj: @articles %>
 		<div class="pagination">
 			<span class="previous_page disabled">Previous</span>
 			<em class="current">1</em>

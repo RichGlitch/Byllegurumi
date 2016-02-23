@@ -1,0 +1,7 @@
+<div class="row inicio">
+  <div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5 center">
+    <%= gravatar_for @user, size: 130 %>
+  </div>
+</div>
+<h1 align="center"> <%= @user.username %> Articulos</h1>
+<%= render 'articles/article', obj: @user.articles %>
