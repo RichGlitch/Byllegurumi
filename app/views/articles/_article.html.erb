@@ -4,7 +4,7 @@
   	<p class="date"><%= article.created_at.strftime("%A, %b, %d") %></p>
   	<h2><%= link_to article.titulo, article_path(article) %></h2>
   	<small>Creado por: <%= article.user.username if article.user %> </small>
-  	<% if logged_in? && current_user == article.user %>
+  	<% if logged_in? && (current_user == article.user || current_user.admin?)  %>
 	  	<div class="article-actions">
 				<%= link_to "Edit this article" , edit_article_path(article) %>
 				<%= link_to "Delete this article" , article_path(article), method: :delete,

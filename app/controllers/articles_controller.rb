@@ -57,7 +57,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:titulo,:subtitulo, :patron)
   end
   def require_same_user
-    if current_user != @article.user
+    if current_user != @article.user and !current_user.admin?
       flash[:danger] = "No puedes borrar este articulo"
       redirect_to root_path
     end
