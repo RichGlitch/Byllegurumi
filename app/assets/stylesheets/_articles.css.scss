@@ -8,6 +8,7 @@
 			font-size: .9em;
 			margin: 0;
 		}
+		
 		h2{
 			margin: 0;
 			font-size: 2em;
@@ -39,6 +40,11 @@
 			margin: 0;
 			color: $color4;
 		}
+		.subtitulo{
+			font-size: .9em;
+			margin: 0;
+			color: $color2;
+		}
 		h1{
 			margin: 0;
 			color: $color5;
@@ -60,7 +66,9 @@
 			background-color: $color4;
 		}
 		.article_patron{
-			background-color: $color4;
+			//background-color: $color4;
+			color: $color6;
+			margin-bottom: 20px;
 		}
 }
 	

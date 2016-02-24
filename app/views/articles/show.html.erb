@@ -1,31 +1,17 @@
 
 <div class="container wrapper_padding skinny_wrapper" id="post_show_content">
 			<header>
-				<% if @article.user %>
-<ul class="listing">
-<div class="row center">
-<div class="col-xs-6 col-xs-offset-3 col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5">
-<li align="center">Created by:</li>
-<li align="center"><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
-<li align="center" class="article-title">
-<%= link_to @article.user.username, user_path(@article.user) %>
-</li>
-<li align="center"><small>
-<%= pluralize(@article.user.articles.count, "article") if @article.user.articles %>
-</small></li>
-</div>
-</div>
-</ul>
-<% end %>
+				
 				<p class="date "><%= @article.created_at.strftime("%A, %b, %d") %></p>
 				<h1><%= @article.titulo %></h1>
+				<p class="subtitulo"><%= @article.subtitulo %></p>
 				<hr>
 			</header>
 			<div id="show_article">
 				<div class="article_content">
 					<div class="col-md-3 img_article"></div>
 					<div class="col-md-8 col-md-offset-1 article_patron">
-						<p><%= @article.patron %></p>
+						<p><%= markdown @article.patron %></p>
 					</div>
 				</div>
 				<hr>
