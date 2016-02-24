@@ -236,3 +236,13 @@ padding-left: 0;
 		}
 	}
 }
+
+.tituloCategoria{
+	text-align: center;
+	a{
+		color: $color5;
+	}
+	a, a:hover{
+		text-decoration: none;
+	}
+}
