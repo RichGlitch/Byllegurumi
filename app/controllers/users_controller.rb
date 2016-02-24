@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :require_same_user, only: [:edit, :update]
   
   def new
-    redirect_to root_path #para que no haya signup. solo usuarios controlados.
+    #redirect_to root_path #para que no haya signup. solo usuarios controlados.
     @user = User.new
   end
   def create
