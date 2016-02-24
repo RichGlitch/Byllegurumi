@@ -27,37 +27,6 @@
 	}
 }
 
-.pagination{
-	width: 100%;
-	text-align: center;
-	margin: 3em 0 0 0;
-	a,.previous_page, .current, .next_page{
-		padding: .75em 1em;
-		margin: 0 .5em;
-		border-radius: .15em;
-		line-height: 20px;
-		text-decoration: none;
-		background-color: $white;
-		font-weight: 700;
-		font-size: .7em;
-		font-style: normal;
-		&:hover{
-			background: $highlight;
-			color: $white;
-		}
-	}
-	.current{
-		background: $highlight;
-		color: $white;
-	}
-	.disabled{
-		color:darkgrey;
-		&:hover{
-			color: darkgrey;
-			background: $white;
-		}
-	}
-}
 
 
 

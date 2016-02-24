@@ -108,6 +108,10 @@ p,ul,ol{
 			text-decoration: none;
 			margin: 0 0rem;
 			font-size: 1.8rem;
+			&:hover{
+				color: $color3;
+			}
+			
 		}
 		ul{
 			float: right;
@@ -120,6 +124,17 @@ p,ul,ol{
 	.icon-bar{
 	  background-color: $navbarBG;
 	}
+}
+.open{
+    color: #300;
+    
+    background: #fff;
+}
+.dropdown-menu{
+	background: $color2;
+}
+.dropdown-menu li{
+	background: $color2;
 }
 #page_title{
 	text-align: center;
@@ -166,7 +181,6 @@ p,ul,ol{
 }
 h1{
 	font-size: 2.3em;
-	text-transform: uppercase;
 	color:$color5;
 }
 .inicio{
@@ -179,4 +193,46 @@ h1{
 .listing {
 list-style: none;
 padding-left: 0;
+}
+
+
+.pagination:before,
+.pagination:after {
+	content: " ";
+	display: table;
+}
+.pagination:after{
+	clear: box;
+}
+.pagination {
+	text-align: center;
+	width: 100%;
+	margin: 0 0 3em 0;
+	a, .previous_page, .current, .next_page{
+		padding: .75em 1em;
+		margin: 0 .25em;
+		border-radius: .15em;
+		line-height: 20px;
+		text-decoration: none;
+		background: $white;
+		font-weight: 700;
+		font-size: .7em;
+		font-style: normal;
+		color: $color2;
+		&:hover{
+			background: $color2;
+			color: $white;
+		}
+	}
+	.current{
+		background: $white;
+		color: $color4;
+	}
+	.disabled {
+		color: #c0c0c0;
+		&:hover{
+			color: #c0c0c0;
+			background: $white;
+		}
+	}
 }

@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
-  
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :destroy, :update]
   
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 2)
+    #@articles = Article.all.order("created_at").paginate(page: params[:page], per_page: 1)
+    @articles = Article.paginate(page: params[:page], per_page: 10)
   end
   
   def new
@@ -12,6 +14,7 @@ class ArticlesController < ApplicationController
   
   
   def edit
+    
   end
   
   def update
@@ -52,5 +55,11 @@ class ArticlesController < ApplicationController
   end
   def article_params
     params.require(:article).permit(:titulo,:subtitulo, :patron)
+  end
+  def require_same_user
+    if current_user != @article.user
+      flash[:danger] = "No puedes borrar este articulo"
+      redirect_to root_path
+    end
   end
 end

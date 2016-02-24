@@ -1,12 +1,11 @@
 <h1 id="page_title">Artículos</h1>
-		<%= render 'article', obj: @articles %>
-		<div class="pagination">
-			<span class="previous_page disabled">Previous</span>
-			<em class="current">1</em>
-			
-			<a rel="next" href="#">2</a>
-			<a class="next_page" href="#">Next</a>
-		</div>
-		
-		
-			
+<%= render 'article', obj: @articles %>
+<!--
+<div class="pagination center">
+  <span class="previous_page disabled"> Previous</span>
+  <em class="current">1</em>
+  <a rel="next" href="#">2</a>
+  <a class="next_page" href="#">Next</a>
+</div>
+-->
+<%= will_paginate @articles %>
