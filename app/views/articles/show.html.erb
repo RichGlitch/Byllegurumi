@@ -12,7 +12,11 @@
 					<div class="col-md-3 img_article"></div>
 					<div class="col-md-8 col-md-offset-1 article_patron">
 						<p><%= markdown @article.patron %></p>
+						<% if @article.categories.any? %>
+							<p>Categorías: <%= render @article.categories %> </p>
+						<% end %>
 					</div>
+					
 				</div>
 				<hr>
 				<div class="article-actions">

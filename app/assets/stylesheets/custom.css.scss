@@ -236,7 +236,38 @@ padding-left: 0;
 		}
 	}
 }
+.badgex{
+	color: $color6;
+		background: $white;
+		font-weight: 700;
+		font-size: .8em;
+		font-style: normal;
+	margin-top: 6px;
+}
 
+.badge {
+	background: $white;
+	color: $color3;
+	a, .previous_page, .current, .next_page{
+		padding: .5em 1em;
+		margin: 0 .2em;
+		border-radius: .15em;
+		line-height: 10px;
+		text-decoration: none;
+		background: $white;
+		font-weight: 700;
+		font-size: .8em;
+		font-style: normal;
+		color: $color5;
+		&:hover{
+			background: $color2;
+			color: $white;
+		}
+	}
+}
+.input_checkbox input{
+	width: auto !important;
+}
 .tituloCategoria{
 	text-align: center;
 	a{

@@ -3,11 +3,15 @@
   <div class="post">
   	<p class="date"><%= article.created_at.strftime("%A, %b, %d") %></p>
   	<h2><%= link_to article.titulo, article_path(article) %></h2>
-  	<small>Creado por: <%= article.user.username if article.user %> </small>
+  	<small >Creado por: <%= article.user.username if article.user %> </small>
+  	
+  	<% if article.categories.any? %>
+			<p class="badgex">Categorías: <%= render article.categories %> </p>
+		<% end %>
   	<% if logged_in? && (current_user == article.user || current_user.admin?)  %>
 	  	<div class="article-actions">
-				<%= link_to "Edit this article" , edit_article_path(article) %>
-				<%= link_to "Delete this article" , article_path(article), method: :delete,
+				<%= link_to "Editar" , edit_article_path(article) %>
+				<%= link_to "Eliminar" , article_path(article), method: :delete,
 				data: {confirm: "Are you sure?"}
 				%>
 			</div>
