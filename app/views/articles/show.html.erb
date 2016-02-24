@@ -21,23 +21,22 @@
 				<hr>
 				<div class="article-actions">
 					<% if logged_in? && (current_user == @article.user || current_user.admin? ) %>
-						<%= link_to "Edit this article" , edit_article_path(@article) %>
-						<%= link_to "View all articles" , articles_path %>
-						<%= link_to "Delete this article" , article_path(@article), method: :delete,
+						[<%= link_to "Editar Artículo" , edit_article_path(@article) %>]
+						[<%= link_to "Lista de artículos" , articles_path %>]
+						[<%= link_to "Eliminar Artículo" , article_path(@article), method: :delete,
 						data: {confirm: "Are you sure?"}
 						
-						%>
+						%>]
 					<% end %>
 				</div>
 			</div>
 			<hr>
 			<div id="share_box">
-				<p>Share <%= @article.titulo %></p>
+				<p>Compartir <%= @article.titulo %></p>
 				<a href="#"><i class="fa fa-twitter"></i></a>
 				<a href="#"><i class="fa fa-facebook"></i></a>
 				<a href="#"><i class="fa fa-google-plus"></i></a>
 			</div>
-			<hr>
 	
 			
 </div>	

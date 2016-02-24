@@ -10,10 +10,10 @@
 		<% end %>
   	<% if logged_in? && (current_user == article.user || current_user.admin?)  %>
 	  	<div class="article-actions">
-				<%= link_to "Editar" , edit_article_path(article) %>
-				<%= link_to "Eliminar" , article_path(article), method: :delete,
+				[<%= link_to "Editar" , edit_article_path(article) %>]
+				[<%= link_to "Eliminar" , article_path(article), method: :delete,
 				data: {confirm: "Are you sure?"}
-				%>
+				%>]
 			</div>
 		<% end %>
 		<hr>
