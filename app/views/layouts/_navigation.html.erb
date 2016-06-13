@@ -13,8 +13,8 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					
-					<li>
-						<%= link_to "Personajes", articles_path %>
+					<!--<li>
+						<% link_to "Personajes", articles_path %>
 					</li>
 					<li>
 						<a href="#">Prendas</a>
@@ -22,10 +22,14 @@
 					<li>
 						<a href="#">Contacto</a>
 					</li>
+				-->
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" 
 						role="button" aria-haspopup="true" aria-expanded="false">Categorías<span class="caret"></span></a>
 						<ul class="dropdown-menu">
+            	<li><a href="#">Muñequitos</a></li>
+            	<li><a href="#">Bufandas y gorros</a></li>
+            	<li role="separator" class="divider"></li>
 							<li><%= link_to "Todas", categories_path %></li>
 							<% Category.all.each do |category| %>
 							<li><%= link_to "#{category.name}", category_path(category) %></li>
